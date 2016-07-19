@@ -12,23 +12,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet weak var tableView: UITableView!
     
-    var posts = [Post]()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         tableView.delegate = self
         tableView.dataSource = self
         
-        let post = Post(imagePath: "", title: "Post 1", description: "post 1 description")
-        let post2 = Post(imagePath: "", title: "Post 2", description: "post 2 description")
-        let post3 = Post(imagePath: "", title: "Post 2", description: "post 2 description")
-        
-        posts.append(post)
-        posts.append(post2)
-        posts.append(post3)
-        
-        tableView.reloadData()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(ViewController.onPostsLoaded(_:)), name: "postsLoaded", object: nil)
+        DataService.instance.loadPosts()
     }
     
     override func didReceiveMemoryWarning() {
@@ -37,11 +28,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return posts.count
+        return DataService.instance.loadedPosts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let post = posts[indexPath.row]
+        let post = DataService.instance.loadedPosts[indexPath.row]
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             cell.configureCell(post)
             return cell
@@ -57,6 +48,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 87.0
     }
     
-    
+    func onPostsLoaded(notif: AnyObject) {
+        tableView.reloadData()
+    }
 }
 

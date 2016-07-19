@@ -15,6 +15,7 @@
 		9296BE311D3E95C2002DE255 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296BE301D3E95C2002DE255 /* Post.swift */; };
 		9296BE351D3E9F15002DE255 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296BE341D3E9F15002DE255 /* PostCell.swift */; };
 		9296BE371D3EA383002DE255 /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296BE361D3EA383002DE255 /* AddPostViewController.swift */; };
+		9296BE3A1D3EB21D002DE255 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296BE391D3EB21D002DE255 /* DataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		9296BE301D3E95C2002DE255 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		9296BE341D3E9F15002DE255 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		9296BE361D3EA383002DE255 /* AddPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
+		9296BE391D3EB21D002DE255 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,11 +62,11 @@
 		9296BE1C1D3E94C4002DE255 /* my-hood */ = {
 			isa = PBXGroup;
 			children = (
+				9296BE381D3EB20A002DE255 /* Services */,
 				9296BE331D3E95CF002DE255 /* Controller */,
 				9296BE321D3E95CA002DE255 /* View */,
 				9296BE2F1D3E95B5002DE255 /* Model */,
 				9296BE1D1D3E94C4002DE255 /* AppDelegate.swift */,
-				9296BE1F1D3E94C4002DE255 /* ViewController.swift */,
 				9296BE241D3E94C4002DE255 /* Assets.xcassets */,
 				9296BE291D3E94C4002DE255 /* Info.plist */,
 			);
@@ -93,8 +95,17 @@
 			isa = PBXGroup;
 			children = (
 				9296BE361D3EA383002DE255 /* AddPostViewController.swift */,
+				9296BE1F1D3E94C4002DE255 /* ViewController.swift */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		9296BE381D3EB20A002DE255 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9296BE391D3EB21D002DE255 /* DataService.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +183,7 @@
 				9296BE311D3E95C2002DE255 /* Post.swift in Sources */,
 				9296BE371D3EA383002DE255 /* AddPostViewController.swift in Sources */,
 				9296BE201D3E94C4002DE255 /* ViewController.swift in Sources */,
+				9296BE3A1D3EB21D002DE255 /* DataService.swift in Sources */,
 				9296BE1E1D3E94C4002DE255 /* AppDelegate.swift in Sources */,
 				9296BE351D3E9F15002DE255 /* PostCell.swift in Sources */,
 			);
