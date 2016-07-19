@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8150" systemVersion="15A204g" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" initialViewController="01J-lp-oVM">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8122"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,8 +20,39 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="RC1-ZG-0LX">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" misplaced="YES" image="bannerlogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zme-hS-gyz">
+                                <rect key="frame" x="41" y="35" width="518" height="194"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Zme-hS-gyz" secondAttribute="height" multiplier="259:97" id="QZE-bj-XRf"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RC1-ZG-0LX" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="3aP-me-OX4"/>
+                            <constraint firstItem="Zme-hS-gyz" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8Nj-jf-3Rx"/>
+                            <constraint firstItem="Zme-hS-gyz" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="20" id="HyZ-QY-L5d"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="Zme-hS-gyz" secondAttribute="bottom" constant="371" id="MI0-2t-eDH"/>
+                            <constraint firstAttribute="trailing" secondItem="RC1-ZG-0LX" secondAttribute="trailing" id="MqO-r8-kYl"/>
+                            <constraint firstItem="Zme-hS-gyz" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xb3-aO-Qok" secondAttribute="top" multiplier="0.35" id="NGd-Nt-CLb"/>
+                            <constraint firstItem="Zme-hS-gyz" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="xb3-aO-Qok" secondAttribute="top" constant="-20" id="bUC-m4-aBl"/>
+                            <constraint firstItem="RC1-ZG-0LX" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ebh-em-Zus"/>
+                            <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="Zme-hS-gyz" secondAttribute="trailing" constant="20" id="gtR-vj-Gqp"/>
+                            <constraint firstAttribute="centerYWithinMargins" relation="greaterThanOrEqual" secondItem="Zme-hS-gyz" secondAttribute="centerY" id="if4-eH-hTZ"/>
+                            <constraint firstItem="Zme-hS-gyz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="8" id="vYL-KJ-AeD"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="RC1-ZG-0LX" secondAttribute="bottom" id="zat-Cr-pz8"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="MI0-2t-eDH"/>
+                                <exclude reference="bUC-m4-aBl"/>
+                                <exclude reference="if4-eH-hTZ"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +60,8 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="back" width="640" height="960"/>
+        <image name="bannerlogo" width="518" height="194"/>
+    </resources>
 </document>
